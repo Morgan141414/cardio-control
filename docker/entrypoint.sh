@@ -15,6 +15,9 @@ fi
 # Clear caches on boot (safe for demo deployments)
 php artisan optimize:clear || true
 
+# Run package discovery (composer scripts are disabled during image build)
+php artisan package:discover --ansi || true
+
 # If using SQLite, ensure the database file exists.
 if [ "${DB_CONNECTION:-}" = "sqlite" ]; then
   DB_PATH="${DB_DATABASE:-/var/www/html/database/database.sqlite}"
