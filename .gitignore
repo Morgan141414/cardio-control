@@ -19,6 +19,12 @@
 /storage/*.key
 /storage/pail
 /vendor
+/cardio-demo-backend/
+
+# Laravel generated caches (do not commit)
+/bootstrap/cache/*.php
+/bootstrap/cache/*.json
+/bootstrap/cache/*.cache
 Homestead.json
 Homestead.yaml
 Thumbs.db

@@ -1,0 +1,38 @@
+// Body
+$body-bg: #f7f9ff;
+$body-color: #0f172a;
+$body-emphasis-color: #0b1220;
+
+// Typography
+$font-family-sans-serif: 'Manrope', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.65;
+
+// Brand palette (premium / SaaS-like)
+$primary: #2563eb;
+$info: #06b6d4;
+$success: #22c55e;
+$warning: #f59e0b;
+$danger: #ef4444;
+$secondary: #334155;
+
+// Components
+$border-radius: 1rem;
+$border-radius-sm: 0.75rem;
+$border-radius-lg: 1.25rem;
+$border-radius-xl: 1.5rem;
+
+$btn-border-radius: 999px;
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.1rem;
+
+$card-border-radius: 1.25rem;
+$card-border-color: rgba(15, 23, 42, 0.08);
+
+$input-border-radius: 0.9rem;
+$input-padding-y: 0.8rem;
+$input-padding-x: 0.95rem;
+
+$enable-shadows: true;
+$box-shadow: 0 12px 40px rgba(2, 6, 23, 0.10);
+$box-shadow-sm: 0 8px 24px rgba(2, 6, 23, 0.08);

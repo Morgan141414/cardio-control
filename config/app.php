@@ -54,6 +54,10 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    // Demo / marketing contacts (MVP)
+    'contact_email' => env('CONTACT_EMAIL', 'demo@cardio-control.kz'),
+    'legal_notice' => env('LEGAL_NOTICE', 'Демо-режим. Не является медицинским изделием.'),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
