@@ -22,7 +22,7 @@ COPY resources ./resources
 RUN npm run build
 
 # 3) Runtime (Apache)
-FROM php:8.2-apache
+FROM php:8.4-apache
 
 # System deps + PHP extensions
 RUN apt-get update \
