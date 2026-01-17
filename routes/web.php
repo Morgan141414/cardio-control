@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoRequestController;
 use App\Http\Controllers\PageController;
 
+// Health check for hosting platforms
+Route::get('/health', fn () => response()->json(['ok' => true]))->name('health');
+
 // Главная страница маркетинга (будет отдавать index.blade.php с Vue)
 Route::get('/', [PageController::class, 'home'])->name('home');
 

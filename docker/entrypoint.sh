@@ -15,4 +15,12 @@ fi
 # Clear caches on boot (safe for demo deployments)
 php artisan optimize:clear || true
 
+# If using SQLite, ensure the database file exists.
+if [ "${DB_CONNECTION:-}" = "sqlite" ]; then
+  DB_PATH="${DB_DATABASE:-/var/www/html/database/database.sqlite}"
+  mkdir -p "$(dirname "$DB_PATH")" || true
+  touch "$DB_PATH" || true
+  chown -R www-data:www-data "$(dirname "$DB_PATH")" || true
+fi
+
 exec apache2-foreground

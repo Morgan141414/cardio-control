@@ -65,6 +65,13 @@ Open: `http://127.0.0.1:8000`
 
 This repo includes a Dockerfile so you can deploy on container hosts (Render/Railway/Fly/etc.).
 
+### Render (recommended)
+
+- This repo includes a blueprint: `render.yaml`.
+- In Render: **New** → **Blueprint** → select this repository.
+- Set `APP_KEY` and `APP_URL` in the service environment.
+- Health check endpoint: `/health`.
+
 ### Required env vars
 
 - `APP_KEY` (generate locally: `php artisan key:generate --show`)
