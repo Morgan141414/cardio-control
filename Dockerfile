@@ -29,11 +29,19 @@ RUN apt-get update \
   && apt-get install -y --no-install-recommends \
     git \
     unzip \
+    libcurl4-openssl-dev \
+    libonig-dev \
     libsqlite3-dev \
+    libxml2-dev \
     libzip-dev \
   && docker-php-ext-install \
+    bcmath \
+    curl \
+    mbstring \
+    opcache \
     pdo \
     pdo_sqlite \
+    xml \
     zip \
   && a2enmod rewrite \
   && rm -rf /var/lib/apt/lists/*
