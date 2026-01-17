@@ -1,6 +1,17 @@
 #!/usr/bin/env sh
 set -eu
 
+# Render provides the externally reachable URL via RENDER_EXTERNAL_URL (https).
+# Use it as a safe default for URL generation and assets.
+if [ -n "${RENDER_EXTERNAL_URL:-}" ]; then
+  if [ -z "${APP_URL:-}" ] || [ "${APP_URL#http://}" != "${APP_URL}" ]; then
+    export APP_URL="$RENDER_EXTERNAL_URL"
+  fi
+  if [ -z "${ASSET_URL:-}" ] || [ "${ASSET_URL#http://}" != "${ASSET_URL}" ]; then
+    export ASSET_URL="$RENDER_EXTERNAL_URL"
+  fi
+fi
+
 # Ensure writable dirs
 mkdir -p storage bootstrap/cache
 chown -R www-data:www-data storage bootstrap/cache || true
