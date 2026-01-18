@@ -60,6 +60,7 @@
                         <div class="text-muted small mt-2">
                             Контакт: <a :href="`mailto:${contactEmail}`" class="text-muted">{{ contactEmail }}</a>
                         </div>
+                        <div class="text-muted small mt-2">made by: Korgan Amanat</div>
                         <p class="text-muted small mt-2">© 2024. Все данные синтетические.</p>
                     </div>
                 </div>

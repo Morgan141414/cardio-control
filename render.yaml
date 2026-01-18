@@ -23,7 +23,7 @@ services:
       - key: DB_DATABASE
         value: /var/www/html/database/database.sqlite
       - key: CONTACT_EMAIL
-        value: hello@your-domain.kz
+        value: amanatkorgan@icloud.com
       - key: LEGAL_NOTICE
         value: "Демо-режим. Не является медицинским изделием и не оказывает медицинских услуг."
       # Set these in Render dashboard (do NOT commit real values)
